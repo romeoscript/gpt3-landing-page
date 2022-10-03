@@ -1,31 +1,24 @@
-import { Article, CTA, Brands, Feature, Navbar } from "./component";
-import {
-  Blog,
-  Possibility,
-  Whatgpt3,
-  Header,
-  Footer,
-  Features,
-} from "./container";
-import "./App.css";
-import "./index.css";
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <div className="gradient__bg">
-        <Navbar />
-        <Header />
-      </div>
-      <Brands />
-      <Whatgpt3 />
-      <Features />
-      <Possibility />
-      <CTA />
-      <Blog />
-      <Footer />
+import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from './containers';
+import { CTA, Brand, Navbar } from './components';
+
+import './App.css';
+
+const App = () => (
+  <div className="App">
+    <div className="gradient__bg">
+      <Navbar />
+      <Header />
     </div>
-  );
-}
+    <Brand />
+    <WhatGPT3 />
+    <Features />
+    <Possibility />
+    <CTA />
+    <Blog />
+    <Footer />
+  </div>
+);
 
 export default App;
